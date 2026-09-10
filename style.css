@@ -1,0 +1,1122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --green: #1b8a5a;
+  --dark-green: #075b3a;
+  --light-green: #eaf8f0;
+  --lime: #a6d96a;
+  --dark: #10241b;
+  --gray: #64736b;
+  --white: #ffffff;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+  background: #fbfdfb;
+  line-height: 1.6;
+}
+
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* NAVBAR */
+
+header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e7eee9;
+  position: relative;
+  z-index: 20;
+}
+
+
+.navbar {
+  width: min(1180px, 92%);
+  margin: auto;
+
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+
+.logo span,
+footer span {
+  color: var(--green);
+}
+
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+  gap: 34px;
+}
+
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #526158;
+
+  transition: .3s;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--green);
+}
+
+
+.menu {
+  display: none;
+  font-size: 25px;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+
+  width: min(1180px, 92%);
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+.hero-content {
+  max-width: 600px;
+}
+
+
+.tag {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+
+.hero h1 span,
+.page-hero h1 span,
+h2 span {
+  color: var(--green);
+}
+
+
+.hero-content>p:not(.tag) {
+  max-width: 550px;
+  color: var(--gray);
+  font-size: 17px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+
+.btn,
+.btn-outline {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  border: none;
+
+  transition: .3s;
+}
+
+
+.btn {
+  color: white;
+  background: var(--green);
+}
+
+
+.btn:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+
+.btn-outline {
+  border: 1px solid #c8d8ce;
+  color: var(--dark-green);
+}
+
+
+.btn-outline:hover {
+  background: var(--light-green);
+}
+
+
+/* SUN */
+
+.sun-animation {
+  width: 420px;
+  height: 420px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sun {
+  width: 170px;
+  height: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 90px;
+
+  background: #fff5bf;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 30px rgba(255, 216, 80, .12),
+    0 0 0 65px rgba(255, 216, 80, .07);
+}
+
+
+.orbit {
+  position: absolute;
+
+  width: 310px;
+  height: 310px;
+
+  border: 1px dashed #a6c7b3;
+  border-radius: 50%;
+
+  animation: rotate 15s linear infinite;
+}
+
+
+.orbit2 {
+  width: 390px;
+  height: 390px;
+
+  animation-duration: 22s;
+  animation-direction: reverse;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* INTRO */
+
+.intro {
+  padding: 100px 4%;
+  text-align: center;
+  background: var(--light-green);
+}
+
+
+.intro h2,
+.section-heading h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.2;
+}
+
+
+.section-text {
+  max-width: 680px;
+  margin: 20px auto 55px;
+  color: var(--gray);
+}
+
+
+.energy-cards {
+  width: min(1100px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+.energy-card {
+  background: white;
+  padding: 35px;
+
+  border-radius: 15px;
+
+  text-align: left;
+
+  border: 1px solid #dcebe2;
+
+  transition: .3s;
+}
+
+
+.energy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(22, 75, 49, .08);
+}
+
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+
+.energy-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+
+.energy-card p {
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.energy-card a {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* STATS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 60px 5%;
+
+  background: var(--dark-green);
+
+  color: white;
+
+  text-align: center;
+}
+
+
+.stats strong {
+  font-family: Poppins;
+  font-size: 35px;
+}
+
+
+.stats p {
+  color: #c7dfd2;
+  font-size: 13px;
+}
+
+
+/* PAGE HERO */
+
+.page-hero {
+  min-height: 500px;
+
+  padding: 80px max(4%, calc((100% - 1180px)/2));
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+.page-hero>div:first-child {
+  max-width: 620px;
+}
+
+
+.page-hero h1 {
+  font-size: clamp(45px, 6vw, 70px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+
+.page-hero p:not(.tag) {
+  color: var(--gray);
+  max-width: 550px;
+}
+
+
+/* SOLAR */
+
+.solar-hero {
+  background:
+    radial-gradient(circle at 80% 30%, #fff0a7, transparent 20%),
+    linear-gradient(120deg, #f1faf4, #ffffff);
+}
+
+
+.content-section {
+  padding: 100px 5%;
+}
+
+
+.section-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+
+.solar-process {
+  width: min(1100px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+.process-card {
+  padding: 30px;
+  border-radius: 15px;
+  background: white;
+  border: 1px solid #e1ebe5;
+}
+
+
+.process-icon {
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+
+.process-card h3 {
+  margin-bottom: 10px;
+}
+
+
+.process-card p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+
+/* BENEFITS */
+
+.benefits {
+  padding: 100px 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  align-items: center;
+
+  background: var(--light-green);
+}
+
+
+.benefit-image {
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(#ccead7 1px, transparent 1px),
+    linear-gradient(90deg, #ccead7 1px, transparent 1px);
+
+  background-size: 35px 35px;
+
+  border-radius: 20px;
+}
+
+
+.solar-panel {
+  width: 300px;
+
+  padding: 12px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+
+  background: #183f4b;
+
+  transform: rotate(-8deg);
+
+  box-shadow: 0 30px 50px rgba(0, 0, 0, .15);
+}
+
+
+.solar-panel div {
+  height: 70px;
+  background: #286c79;
+  border: 1px solid #75aeba;
+}
+
+
+.benefit-content h2 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+
+.benefit-list {
+  list-style: none;
+}
+
+
+.benefit-list li {
+  margin-bottom: 25px;
+}
+
+
+.benefit-list strong {
+  font-size: 17px;
+}
+
+
+.benefit-list p {
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* CALCULATOR */
+
+.calculator {
+  padding: 100px 5%;
+}
+
+
+.calculator-box {
+  max-width: 600px;
+  margin: auto;
+
+  padding: 40px;
+
+  background: white;
+
+  border: 1px solid #dce8e0;
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(20, 80, 45, .07);
+}
+
+
+.calculator-box label {
+  display: block;
+  margin: 20px 0 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.calculator-box input {
+  width: 100%;
+  padding: 15px;
+
+  border: 1px solid #ccd9d1;
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+
+.calculator-box input:focus {
+  border-color: var(--green);
+}
+
+
+.calculator-box button {
+  margin-top: 25px;
+}
+
+
+.result {
+  margin-top: 25px;
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background: var(--light-green);
+
+  color: var(--dark-green);
+
+  font-weight: 700;
+}
+
+
+/* WIND */
+
+.wind-hero {
+  background:
+    linear-gradient(120deg, #eef9f5, #fff),
+    #fff;
+}
+
+
+.turbine {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+
+  width: 250px;
+  height: 350px;
+}
+
+
+.tower {
+  position: absolute;
+
+  bottom: 0;
+  left: 105px;
+
+  width: 40px;
+  height: 250px;
+
+  background: linear-gradient(90deg,
+      #b9c5c0,
+      white,
+      #9aa9a3);
+
+  clip-path: polygon(35% 0,
+      65% 0,
+      90% 100%,
+      10% 100%);
+}
+
+
+.turbine-center {
+  position: absolute;
+
+  left: 83px;
+  top: 83px;
+
+  width: 80px;
+  height: 80px;
+
+  background: white;
+
+  border: 12px solid #7f9188;
+
+  border-radius: 50%;
+
+  z-index: 3;
+}
+
+
+.blades {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  left: 33px;
+  top: 35px;
+
+  animation: turbineSpin 5s linear infinite;
+
+  z-index: 2;
+}
+
+
+.blades span {
+  position: absolute;
+
+  width: 15px;
+  height: 100px;
+
+  left: 82px;
+  top: 0;
+
+  background: var(--green);
+
+  border-radius: 100% 0 100% 0;
+
+  transform-origin: 50% 100%;
+}
+
+
+.blades span:nth-child(2) {
+  transform: rotate(120deg);
+}
+
+
+.blades span:nth-child(3) {
+  transform: rotate(240deg);
+}
+
+
+@keyframes turbineSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* WIND STEPS */
+
+.steps {
+  width: min(1100px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+.step {
+  padding: 30px;
+
+  border-left: 3px solid var(--green);
+}
+
+
+.step span {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+.step h3 {
+  margin: 12px 0;
+}
+
+
+.step p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+
+/* CHART */
+
+.chart-section {
+  padding: 100px 5%;
+  background: var(--light-green);
+}
+
+
+.chart-box {
+  max-width: 900px;
+  height: 420px;
+
+  margin: auto;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 40px rgba(20, 80, 45, .08);
+}
+
+
+.wind-info {
+  padding: 100px 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.wind-info h2 {
+  font-size: 40px;
+  line-height: 1.25;
+}
+
+
+.wind-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+
+.wind-facts div {
+  padding: 30px 15px;
+
+  text-align: center;
+
+  background: var(--light-green);
+
+  border-radius: 12px;
+}
+
+
+.wind-facts strong {
+  font-size: 35px;
+}
+
+
+/* LIFESTYLE */
+
+.lifestyle-hero {
+  background:
+    radial-gradient(circle at 85% 40%, #c8edb4, transparent 25%),
+    #f2faf2;
+}
+
+
+.blog-grid {
+  width: min(1100px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.blog-card {
+  padding: 30px;
+
+  border: 1px solid #e0e9e2;
+
+  background: white;
+
+  border-radius: 15px;
+
+  transition: .3s;
+}
+
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(20, 80, 45, .08);
+}
+
+
+.blog-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+
+.blog-category {
+  color: var(--green);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+
+.blog-card h3 {
+  margin-bottom: 12px;
+}
+
+
+.blog-card>p:not(.blog-category) {
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.blog-card a {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.green-quote {
+  padding: 100px 8%;
+
+  background: var(--dark-green);
+
+  color: white;
+
+  text-align: center;
+}
+
+
+.green-quote>div {
+  max-width: 750px;
+  margin: auto;
+}
+
+
+.green-quote h2 {
+  font-size: 42px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+
+.green-quote p:not(.tag) {
+  color: #c9ded3;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 50px 6%;
+
+  background: #081b12;
+
+  color: white;
+}
+
+
+.footer-content {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+
+.footer-content h2 {
+  font-size: 25px;
+}
+
+
+.footer-content p {
+  color: #a8bdb3;
+  margin-top: 8px;
+}
+
+
+.copyright {
+  padding-top: 25px;
+
+  border-top: 1px solid #294237;
+
+  text-align: center;
+
+  color: #81978c;
+
+  font-size: 12px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .hero {
+    text-align: center;
+    justify-content: center;
+    min-height: 700px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .sun-animation {
+    position: absolute;
+    opacity: .25;
+    z-index: -1;
+  }
+
+  .energy-cards {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .solar-process,
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits,
+  .wind-info {
+    grid-template-columns: 1fr;
+  }
+
+  .turbine {
+    opacity: .2;
+    right: 2%;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 68px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn,
+  .btn-outline {
+    text-align: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section,
+  .calculator,
+  .chart-section {
+    padding: 70px 5%;
+  }
+
+  .solar-process,
+  .steps,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits {
+    padding: 70px 5%;
+    gap: 40px;
+  }
+
+  .benefit-content h2,
+  .wind-info h2,
+  .green-quote h2 {
+    font-size: 32px;
+  }
+
+  .chart-box {
+    height: 300px;
+    padding: 15px;
+  }
+
+  .wind-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    min-height: 500px;
+    padding: 60px 5%;
+  }
+
+  .solar-panel {
+    width: 230px;
+  }
+
+}
